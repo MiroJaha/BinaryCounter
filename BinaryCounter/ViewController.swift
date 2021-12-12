@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         for i in 0..<16{
             arrayOfPower.append(Int(round(pow(10, Double(i)))))
         }
+        updateTotal()
     }
 
     func updateTotal(){
