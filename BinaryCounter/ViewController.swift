@@ -28,16 +28,6 @@ class ViewController: UIViewController {
     func updateTotal(){
         totalLabel.text = "Total: \(total)"
     }
-    
-    @objc func addPluss (sender: UIButton){
-        total += arrayOfPower[sender.tag]
-        updateTotal()
-    }
-    
-    @objc func minessNumber (sender: UIButton){
-        total -= arrayOfPower[sender.tag]
-        updateTotal()
-    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -50,13 +40,19 @@ extension ViewController: UITableViewDataSource {
         self.cell = tableView.dequeueReusableCell(withIdentifier: "MyCell", for: indexPath) as! CustomTableViewCell
         
         self.cell.powerLabel.text = String(arrayOfPower[indexPath.row])
-        
-        self.cell.plusButton.tag = indexPath.row
-        self.cell.minessButton.tag = indexPath.row
-        
-        self.cell.plusButton.addTarget(self, action: #selector(addPluss), for: .touchUpInside)
-        self.cell.minessButton.addTarget(self, action: #selector(minessNumber), for: .touchUpInside)
-        
+        self.cell.delegate = self
         return self.cell
+    }
+}
+
+extension ViewController: ChangeValue {
+    func addToValue(number: Int) {
+        total += number
+        updateTotal()
+    }
+    
+    func minessFromValue(number: Int) {
+        total -= number
+        updateTotal()
     }
 }

@@ -40,6 +40,9 @@
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
                                                         <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="miness:" destination="T6s-Ix-zPZ" eventType="touchUpInside" id="A2L-1l-aqk"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aux-5x-t0t">
                                                     <rect key="frame" x="373.5" y="0.0" width="40.5" height="44.5"/>
@@ -48,6 +51,9 @@
                                                         <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
                                                         <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="add:" destination="T6s-Ix-zPZ" eventType="touchUpInside" id="z9X-VV-87g"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -65,8 +71,6 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <connections>
-                                            <outlet property="minessButton" destination="exE-lu-hzM" id="c9L-hw-chV"/>
-                                            <outlet property="plusButton" destination="Aux-5x-t0t" id="F7m-cm-ueO"/>
                                             <outlet property="powerLabel" destination="1Mz-lW-X6U" id="1kI-VI-HI7"/>
                                         </connections>
                                     </tableViewCell>
